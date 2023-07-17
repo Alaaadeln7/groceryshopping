@@ -1,0 +1,50 @@
+@use '../../style/mixins' as *;
+$scoundry-color: #fb9334;
+
+.contact {
+  .container {
+    .content {
+      @media (max-width:768px) {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .text {
+        @include center;
+        gap: 10px;
+
+        @media (max-width:768px) {
+          max-width: 100%;
+
+          h1 {
+            font-size: 22px
+          }
+        }
+
+        form {
+
+          input,
+          textarea {
+            outline: none;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 4%;
+            font-size: 17px;
+            width: 100%
+          }
+
+          input[type="submit"] {
+            @include btn;
+
+            // width: 100%;
+            &:hover {
+              background-color: $scoundry-color;
+              border: 1px solid $scoundry-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

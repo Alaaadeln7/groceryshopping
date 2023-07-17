@@ -1,0 +1,70 @@
+@use '../../style/mixins' as *;
+
+.sign-up {
+  margin-top: 5%;
+
+  .container {
+    .content {
+      .text {
+        max-width: 100%;
+        @include center;
+        gap: 10px;
+
+        .upload-img {
+          .personal_img {
+            @include circle(100px);
+          }
+
+          label {
+            @include btn;
+            @include center;
+          }
+
+          input[type="file"] {
+            display: none;
+          }
+
+
+        }
+
+        form {
+          width: 100%;
+
+          input {
+            width: 100%;
+            outline: none;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 4% 0;
+            font-size: 17px;
+
+          }
+
+          button {
+            @include btn;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes error {
+  25% {
+    transform: translateX(-10%);
+  }
+
+  50% {
+    transform: translateX(10%);
+  }
+
+  75% {
+    transform: translateX(-10%);
+  }
+
+  100% {
+    transform: translateX(10%);
+  }
+}

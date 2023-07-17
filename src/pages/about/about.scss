@@ -1,0 +1,51 @@
+@use '../../style/mixins' as *;
+$primary-color: #2fac51;
+
+.about {
+  .container {
+    .content {
+      @media (max-width:768px) {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .text {
+        @media (max-width:768px) {
+          max-width: 100%;
+
+          h1 {
+            font-size: 22px
+          }
+
+          ul {
+            margin-left: 20px;
+
+            li {
+              &::before {
+                top: 10%;
+                left: -8%;
+              }
+            }
+          }
+        }
+
+        ul {
+          li {
+            position: relative;
+            margin: 2% 0;
+            @include p;
+
+            &::before {
+              content: '';
+              @include circle(10px);
+              background-color: $primary-color;
+              position: absolute;
+              top: 10%;
+              left: -8%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

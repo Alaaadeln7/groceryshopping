@@ -1,0 +1,31 @@
+@use '../../style/mixins' as *;
+
+.categories {
+  margin-top: 5%;
+
+  .header-categories {
+    @include center;
+
+    nav {
+      width: 100%;
+
+      ul {
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin: 2%;
+
+          button {
+            @include btn;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    @include space-around-center;
+    flex-wrap: wrap;
+  }
+}

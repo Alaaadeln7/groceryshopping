@@ -1,0 +1,18 @@
+$primary-color: #2fac51;
+$scoundry-color: #fb9334;
+$dark-color: #2b3135;
+$light-color: #fff;
+$stars-color: #f8b500;
+$transition: all .3s ease;
+$paragraph-color: #595959;
+
+// to implement some code to formate design
+@use './style/global-rouls' as *;
+// start website font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+// end website font

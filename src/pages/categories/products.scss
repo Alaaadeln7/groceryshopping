@@ -1,0 +1,36 @@
+@use '../../style/mixins' as*;
+$primary-color: #2fac51;
+$light-color: #fff;
+
+.products {
+  .header-categories {
+    @include center;
+
+    nav {
+      width: 100%;
+
+      ul {
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin: 2%;
+
+
+          button {
+            @include btn;
+          }
+
+        }
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2%;
+    flex-wrap: wrap;
+  }
+}
